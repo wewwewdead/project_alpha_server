@@ -18,7 +18,7 @@ router.post('/convert', upload, async(req,res) =>{
         return res.status(400).json({message: 'No image file uploaded'})
     }try {
     const base64Image = req.file.buffer.toString("base64");
-    console.log('SERVER-SIDE: Base64 image length:', base64Image.length)
+    // console.log('SERVER-SIDE: Base64 image length:', base64Image.length)
     const convertImageFunction = {
         name: 'convert_image', //this is the name of the function
         description: 
