@@ -1,16 +1,14 @@
 import express from 'express'
 import cors from 'cors';
 import router from './routes/router.js';
+import dotenv from 'dotenv';
 
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-    origin:[
-        'https://project-alpha-client.onrender.com',
-        'https://http://localhost:5173'
-    ],
+    origin:'*',
     methods:'GET,POST,PUT,DELETE',
     credentials: true
 }))
