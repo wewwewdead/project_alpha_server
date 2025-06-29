@@ -7,7 +7,10 @@ const app = express();
 const PORT = 8080;
 
 app.use(cors({
-    origin:'*',
+    origin:[
+        'https://project-alpha-client.onrender.com',
+        'https://http://localhost:5173/'
+    ],
     methods:'GET,POST,PUT,DELETE',
     credentials: true
 }))
